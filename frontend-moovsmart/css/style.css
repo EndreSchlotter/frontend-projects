@@ -1,0 +1,576 @@
+/* ----------- color schemas to help building grid ------ */
+
+.red {
+    background: red;
+}
+
+.green {
+    background: green;
+}
+
+.blue {
+    background: blue;
+}
+
+.pink {
+    background: pink;
+}
+
+.purple {
+    background: purple;
+}
+
+.yellow {
+    background: yellow;
+}
+
+
+/*  ------------- html and body ----------- */
+
+html,
+* {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Nunito', sans-serif;
+}
+
+p,
+a {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
+/*  ------------------ header ------------------ */
+
+.menu {
+    min-height: 70px;
+    background: #effad3;
+    position: relative;
+    padding: 0.05em;
+}
+
+.header-img-holder {
+    display: none;
+    width: 100%;
+    height: 250px;
+    background-image: url('../img/header-cover.jpg');
+    position: relative;
+}
+
+.header-img-textbox {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: whitesmoke;
+    padding-left: 0.7rem;
+    width: 37%;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+.navigation-list-bar {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 10%;
+    top: 40%;
+    transform: translate(-10%, -40%);
+}
+
+.navigation-list-bar img {
+    max-width: 100%;
+}
+
+.navigation-links {
+    display: none;
+    top: 0.12rem;
+    left: 0.3rem;
+    margin: 1% 0 1% 3%;
+}
+
+.navigation-links a {
+    text-decoration: none;
+    color: teal;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.13rem;
+    margin: 0 1%;
+    font-size: 1.2rem;
+}
+
+.navigation-links a:hover {
+    background: teal;
+    color: whitesmoke;
+}
+
+.social-icons {
+    position: absolute;
+    width: 40%;
+    height: 40px;
+    right: 2%;
+    top: 10%;
+    transform: translate(-2%, -10%);
+    text-align: center;
+    padding: 2px;
+}
+
+.social-icons div {
+    height: 40px;
+    width: 40px;
+    padding: 0.12rem;
+    padding-bottom: 0.12rem;
+    display: inline-block;
+    margin: 0 1%;
+    border-radius: 50%;
+}
+
+.social-icons img {
+    width: 85%;
+}
+
+.facebook {
+    border: 1px solid cornflowerblue;
+}
+
+.insta {
+    border: 1px solid purple;
+}
+
+.mail {
+    border: 1px solid red;
+}
+
+
+/*  --------------- grid & main ------------ */
+
+main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.features-section {
+    grid-area: 1/1/2/13;
+}
+
+article {
+    grid-area: 2/1/3/13;
+}
+
+.paid-ad-section {
+    grid-area: 3/1/4/13;
+}
+
+
+/* -------------------features section ----------- */
+
+.features-section>* {
+    min-height: 150px;
+    width: 97%;
+    margin: 1% auto;
+    border: 1px solid white;
+    color: whitesmoke;
+    border-radius: 10px;
+}
+
+.features-section .feature-text {
+    text-align: center;
+}
+
+.features-section .feature-text h3 a {
+    text-decoration: none
+}
+
+.search-container {
+    background: teal;
+    animation-name: appear;
+    animation-duration: 2s;
+}
+
+.features-section .features-icon {
+    background-color: whitesmoke;
+    width: 5rem;
+    height: 5rem;
+    margin: 2% auto;
+    border-radius: 50%;
+    padding: 0.5em;
+    padding-left: 10px;
+}
+
+.features-icon img {
+    width: 75%;
+}
+
+.registration-container {
+    background: mediumseagreen;
+    animation-name: appear;
+    animation-duration: 4s;
+}
+
+.ad-container {
+    background: seagreen;
+    animation-name: appear;
+    animation-duration: 6s;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1.0;
+    }
+}
+
+
+/* ---------------- article --------------  */
+
+article {
+    background: #effad3;
+    position: relative;
+    border-radius: 3px;
+    margin: 0 auto;
+    width: 97%;
+}
+
+article .reception-text-holder {
+    width: 95%;
+    background: mediumseagreen;
+    color: whitesmoke;
+    margin: 0 auto;
+    margin-bottom: 3%;
+    padding: 1px;
+    padding-left: 2rem;
+    box-sizing: content-box;
+    border-radius: 10px;
+}
+
+article img {
+    width: 15%;
+    border: 1px solid seagreen;
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 30%);
+}
+
+article p {
+    font-size: 4vw;
+}
+
+article h3 {
+    font-size: 5vw;
+    padding-right: 0.12rem;
+    margin-top: 5%;
+}
+
+
+/* ----------------- paid-ad section --------------------- */
+
+.paid-ad-section>div {
+    width: 95%;
+    margin: 1% auto;
+    border-radius: 2px;
+    box-shadow: 1px 4px 4px 0 rgba(0, 0, 0, 0.5);
+    min-height: 200px;
+    text-align: center;
+}
+
+.left-ad-container,
+.middle-ad-container,
+.right-ad-container {
+    padding: 1px;
+}
+
+.paid-ad-section .img-holder {
+    width: 90%;
+    height: 270px;
+    overflow: hidden;
+    margin: 2% auto;
+}
+
+.paid-ad-section img {
+    width: 100%;
+}
+
+.paid-ad-section h3 {
+    font-size: 3vw;
+}
+
+.paid-ad-section p {
+    font-size: 2vw;
+}
+
+
+/* ---------------- footer ------------- */
+
+footer {
+    min-height: 100px;
+    width: 100%;
+    background: teal;
+    color: whitesmoke;
+    margin-top: 3%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-holder {
+    flex: 100%;
+    margin: 2% auto;
+}
+
+.contact-links {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.infos-holder {
+    width: 70%;
+    margin: 0 auto;
+}
+
+footer a {
+    display: block;
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 3vw;
+}
+
+footer span {
+    width: 1.5em;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 2% 10%;
+    padding: 3px;
+    background: whitesmoke;
+}
+
+footer img {
+    width: 1.1em;
+}
+
+footer p {
+    font-size: 3vw;
+    text-align: center;
+}
+
+footer h3 {
+    font-size: 4vw;
+    text-align: center;
+}
+
+svg {
+    margin: 1% auto;
+}
+
+.under-line {
+    width: 400px;
+    height: 100px;
+    fill: rgb(255, 255, 255);
+}
+
+footer small a {
+    display: inline-block;
+    font-size: 0.9rem;
+}
+
+
+/* -------------------- tablet screen --------------- */
+
+@media (min-width: 768px) {
+    .header-img-holder {
+        display: block;
+    }
+    header .menu {
+        min-height: 50px;
+    }
+    .navigation-list-bar {
+        display: none;
+    }
+    .navigation-links {
+        display: block;
+    }
+    .header-img-textbox {
+        max-height: 95%;
+        font-size: 1.5vw;
+    }
+    .features-section {
+        margin-top: 3%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    .search-container {
+        grid-column: 1 / 13;
+        min-height: 250px;
+    }
+    .registration-container {
+        grid-column: 1 / 7;
+    }
+    .ad-container {
+        grid-column: 7/ 13;
+    }
+    .paid-ad-section {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        justify-items: cesnter;
+    }
+    .left-ad-container {
+        grid-column: 1/7;
+    }
+    .middle-ad-container {
+        grid-column: 7/13;
+    }
+    .right-ad-container {
+        grid-area: 2 / 4 / 3/10;
+    }
+    .paid-ad-section .img-holder {
+        /* width: 90%; */
+        height: 220px;
+    }
+    article {
+        margin: 5% auto;
+    }
+    article p {
+        font-size: 3vw;
+    }
+    .search-container p,
+    .registration-container p,
+    .ad-container p {
+        font-size: 2vw;
+    }
+    .features-section h3 {
+        font-size: 2.5vw;
+    }
+    article h3 {
+        font-size: 4vw;
+    }
+    .contact-holder {
+        flex: 50%;
+        margin: 0;
+        width: 45%;
+    }
+    .infos-holder {
+        flex: 50%;
+        margin: 0;
+        width: 45%;
+    }
+    .contact-links {
+        width: 100%;
+    }
+    footer svg {
+        display: none;
+    }
+    footer p,
+    footer a {
+        font-size: 2.2vw;
+        margin-left: 0;
+    }
+    footer h3 {
+        font-size: 3vw;
+    }
+    footer nav h3 {
+        text-align: left;
+        padding-left: 1.5rem;
+    }
+    footer span {
+        margin: 0 0 1% 3%;
+    }
+}
+
+
+/* ---------------- wide screen ------------- */
+
+@media (min-width:1000px) {
+    main {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+    .header-img-textbox h1 {
+        margin-top: 0.5rem;
+        /* font-size: 1.5vw; */
+    }
+    .search-container {
+        grid-column: 1 / 5;
+    }
+    .registration-container {
+        grid-column: 5 /9;
+    }
+    .ad-container {
+        grid-column: 9 / 13;
+    }
+    .left-ad-container {
+        grid-column: 1 / 5;
+    }
+    .middle-ad-container {
+        grid-column: 5 / 9;
+    }
+    .right-ad-container {
+        grid-area: 1 / 9 / 2 / 13;
+    }
+    .paid-ad-section .img-holder {
+        height: 200px;
+    }
+    article p {
+        font-size: 1.5vw;
+    }
+    article h3 {
+        padding-right: 2px;
+        margin-top: 5%;
+        font-size: 2vw;
+    }
+    .paid-ad-section h3 {
+        font-size: 2vw;
+    }
+    .paid-ad-section p {
+        font-size: 1vw;
+    }
+    article .reception-text-holder {
+        max-width: 60%;
+        margin: 3% auto;
+        margin-left: 35%;
+        padding: 1px;
+        padding-left: 2rem;
+        box-sizing: content-box;
+        position: relative;
+    }
+    article img {
+        position: static;
+        float: left;
+        margin-left: 12%;
+        margin-top: 3%;
+        left: 0;
+        top: 0;
+        transform: none;
+    }
+    footer p,
+    footer a {
+        font-size: 1.5vw;
+    }
+    footer h3 {
+        font-size: 2vw;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .paid-ad-section .img-holder {
+        height: 300px;
+    }
+}
