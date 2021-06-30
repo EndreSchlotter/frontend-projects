@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    height: 93vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.container h1 {
+    font-weight: bold;
+    font-size: 4em;
+}
+
+
+.text-value {
+    color: green;
+    font-weight: bold;
+    font-size: 4em;
+}
+
+.btn {
+    margin: 1em;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-transform: uppercase;
+    line-height: 2em;
+}
+
+
